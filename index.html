@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fabio Cabelos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg1: 220 20% 15%;
+            --bg2: 220 20% 8%;
+            --btn-bg: 0 0% 100% / 10%;
+            --btn-hover: 0 0% 100% / 20%;
+            --text: 0 0% 100%;
+            --muted: 0 0% 70%;
+            --accent: 200 90% 50%;
+            --radius: 14px;
+            --shadow: 0 0% 0% / 40%;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(160deg, hsl(var(--bg1)), hsl(var(--bg2)));
+            color: hsl(var(--text));
+            display: grid;
+            place-items: center;
+            padding: 25px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 620px;
+            background: hsl(var(--bg2) / 0.8);
+            border: 1px solid hsl(0 0% 100% / 15%);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            box-shadow: 0 10px 40px -8px hsl(var(--shadow));
+            padding: 28px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px -6px hsl(var(--shadow));
+            object-fit: cover;
+            margin-bottom: 14px;
+        }
+
+        .name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: hsl(var(--muted));
+        }
+
+        .links {
+            display: grid;
+            gap: 14px;
+            margin: 20px 0;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            background: hsl(var(--btn-bg));
+            border: 2px solid hsl(0 0% 100% / 15%);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            text-decoration: none;
+            color: hsl(var(--text));
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .link-btn:hover {
+            background: hsl(var(--btn-hover));
+            transform: translateY(-2px);
+        }
+
+        .icon {
+            font-size: 1.8rem;
+            margin-right: 14px;
+            width: 38px;
+            text-align: center;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .social-chip {
+            background: hsl(var(--btn-bg));
+            border: 1px solid hsl(0 0% 100% / 15%);
+            padding: 10px 14px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: hsl(var(--text));
+            font-size: 1rem;
+            transition: background 0.2s ease;
+        }
+
+        .social-chip:hover {
+            background: hsl(var(--btn-hover));
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: hsl(var(--muted));
+            margin-top: 18px;
+        }
+
+        .extras {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .extra-btn {
+            background: hsl(var(--btn-bg));
+            border: 1px solid hsl(0 0% 100% / 15%);
+            padding: 10px 16px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: hsl(var(--text));
+            font-size: 1rem;
+            font-weight: 400;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .extra-btn:hover {
+            background: hsl(var(--btn-hover));
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="header">
+            <img class="avatar" src="./img/Logo.jpg" alt="Foto de Perfil">
+            <div class="name">Fabio Cabelos</div>
+            <div class="bio">Fábio Cabelos – Cabeleireiro profissional com vasta experiência no cuidado, corte e
+                transformação dos cabelos. Apaixonado por realçar a beleza e a autoestima de cada cliente, oferecendo
+                atendimento personalizado e técnicas modernas para todos os estilos.</div>
+        </div>
+
+        <div class="links">
+            <a class="link-btn" href="https://wa.me/5514997198666" target="_blank">
+                 <span class="icon"><i class="fa-brands fa-whatsapp fa-lg"></i></span> WhatsApp
+            </a>
+            <a class="link-btn" href="https://instagram.com/fabiocabeloss/" target="_blank">
+             <span class="icon"><i class="fa-brands fa-instagram fa-lg"></i></span> Instagram
+            </a>
+            <a class="link-btn" href="mailto:fabiocabelos17@gmail.com" target="_blank">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span> E-mail
+            </a>
+            <a class="link-btn" href="produtos.html" target="_blank">
+                <span class="icon">🛍️</span> Produtos
+            </a>
+        </div>
+
+        <div class="socials">
+            <a class="link-btn"
+                href=https://www.google.com/maps/place/R.+Rio+Branco,+715+-+Centro,+Lins+-+SP,+16400-085/@-21.6757711,-49.7558403,18z/data=!3m1!4b1!4m6!3m5!1s0x94be15cbb4e58a05:0x63d861a8b18d7d10!8m2!3d-21.6757711!4d-49.7550918!16s%2Fg%2F11c1b4jpdf?entry=ttu&g_ep=EgoyMDI1MDgxMS4wIKXMDSoASAFQAw%3D%3D
+                target="_blank">
+                <span class="icon">📍</span>Localização
+            </a>
+            <a class="link-btn" href="avaliacoes.html" target="_blank">
+                <span class="icon">⭐</span> Avaliações
+            </a>
+
+        </div>
+
+        <div class="footer">
+            ©2025 Fabio Macedo — Todos os direitos reservados
+        </div>
+    </div>
+
+</body>
+
+</html>

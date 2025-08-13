@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fábio Cabelos - Produtos</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1: 220 20% 15%;
+  --bg2: 220 20% 8%;
+  --card-bg: 0 0% 100% / 8%;
+  --text: 0 0% 100%;
+  --muted: 0 0% 70%;
+  --accent: 200 90% 50%;
+  --radius: 14px;
+  --shadow: 0 0% 0% / 40%;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(160deg, hsl(var(--bg1)), hsl(var(--bg2)));
+  color: hsl(var(--text));
+  min-height: 100vh;
+  padding: 24px;
+}
+header{text-align:center;margin-bottom:32px;}
+header h1{font-size:2rem;font-weight:700;margin-bottom:6px;}
+header p{color:hsl(var(--muted));font-size:1rem;}
+
+.products{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:24px;
+}
+
+.product-card{
+  background:hsl(var(--card-bg));
+  backdrop-filter: blur(12px) saturate(140%);
+  border:1px solid hsl(0 0% 100% / 12%);
+  border-radius: var(--radius);
+  overflow:hidden;
+  box-shadow:0 10px 25px -10px hsl(var(--shadow));
+  display:flex;
+  flex-direction:column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.product-card:hover{
+  transform: translateY(-4px);
+  box-shadow:0 15px 35px -12px hsl(var(--shadow));
+}
+.product-card img{width:100%;height:180px;object-fit:cover;}
+
+.product-info{
+  padding:16px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.product-info h2{font-size:1.2rem;font-weight:700;margin-bottom:6px;}
+.product-info p{font-size:0.9rem;color:hsl(var(--muted));margin-bottom:12px;flex:1;}
+.price{font-weight:700;font-size:1.1rem;margin-bottom:10px;}
+
+.buy-btn{
+  background:hsl(var(--accent));
+  color:hsl(var(--text));
+  text-decoration:none;
+  text-align:center;
+  padding:12px 0;
+  border-radius: var(--radius);
+  font-weight:600;
+  transition: background .2s ease;
+}
+.buy-btn:hover{background:hsl(var(--accent)/0.85);}
+footer{text-align:center;margin-top:36px;font-size:0.85rem;color:hsl(var(--muted));}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Fábio Cabelos - Produtos</h1>
+  <p>Confira nossos produtos de cuidado capilar e beleza</p>
+</header>
+
+<main class="products">
+  <!-- Produto 1 -->
+  <div class="product-card">
+    <img src="./img/produto.jpg" alt="Shampoo Premium">
+    <div class="product-info">
+      <h2>Shampoo Premium</h2>
+      <p>Shampoo nutritivo para todos os tipos de cabelo, hidrata e fortalece os fios.</p>
+      <div class="price">R$ 45,00</div>
+      <a class="buy-btn" href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20o%20Shampoo%20Premium" target="_blank">Comprar via WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Produto 2 -->
+  <div class="product-card">
+    <img src="./img/produto2.jpg" alt="Máscara Capilar">
+    <div class="product-info">
+      <h2>Máscara Capilar</h2>
+      <p>Máscara de tratamento profundo, hidratação intensa e brilho natural.</p>
+      <div class="price">R$ 65,00</div>
+      <a class="buy-btn" href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20a%20Máscara%20Capilar" target="_blank">Comprar via WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Produto 3 -->
+  <div class="product-card">
+    <img src="./img/produto.jpg" alt="Óleo Capilar">
+    <div class="product-info">
+      <h2>Óleo Capilar</h2>
+      <p>Óleo nutritivo que reduz frizz e dá brilho intenso aos fios.</p>
+      <div class="price">R$ 35,00</div>
+      <a class="buy-btn" href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20o%20Óleo%20Capilar" target="_blank">Comprar via WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Produto 4 -->
+  <div class="product-card">
+    <img src="./img/produto2.jpg" alt="Condicionador Nutritivo">
+    <div class="product-info">
+      <h2>Condicionador Nutritivo</h2>
+      <p>Condicionador que deixa o cabelo macio, sedoso e fácil de pentear.</p>
+      <div class="price">R$ 40,00</div>
+      <a class="buy-btn" href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20o%20Condicionador%20Nutritivo" target="_blank">Comprar via WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Produto 5 -->
+  <div class="product-card">
+    <img src="./img/produto.jpg" alt="Spray Modelador">
+    <div class="product-info">
+      <h2>Spray Modelador</h2>
+      <p>Spray que ajuda a manter o penteado, fixando sem deixar resíduos.</p>
+      <div class="price">R$ 50,00</div>
+      <a class="buy-btn" href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20o%20Spray%20Modelador" target="_blank">Comprar via WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Produto 6 -->
+  <div class="product-card">
+    <img src="./img/produto2.jpg" alt="Leave-in Hidratante">
+    <div class="product-info">
+      <h2>Leave-in Hidratante</h2>
+      <p>Leave-in que hidrata, protege do calor e mantém os fios disciplinados.</p>
+      <div class="price">R$ 55,00</div>
+      <a class="buy-btn" href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20o%20Leave-in%20Hidratante" target="_blank">Comprar via WhatsApp</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2025 Fábio Cabelos — Todos os direitos reservados
+</footer>
+
+</body>
+</html>

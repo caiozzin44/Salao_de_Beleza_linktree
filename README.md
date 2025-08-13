@@ -1,2 +1,2 @@
-# Sal-o_de_Beleza_linktree
+# Salao de beleza
 # Salao_linktree
